@@ -1,8 +1,10 @@
 package com.example.sof203_sd20303_bl1_fa25.B2_LamViecVoiForm;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 //@: anotation
@@ -36,17 +38,28 @@ public class LoginServlet extends HttpServlet {
         // chuyen sang trang jsp
         // C1: getRequestDispatcher
         // Truyen du lieu tu servlet => jsp
-//        int a = 5;
-//        String mess ="Xin chao SOF203";
-//        // setAttribute(ten bien truyen jsp, gia tri truyen di)
-//        request.setAttribute("mess1",mess);
-//        request.getRequestDispatcher("/buoi1/login-form.jsp").forward(request,response);
+        // Java class => giao dien
+        int a = 5;
+        String mess ="Xin chao SOF203";
+//         setAttribute(ten bien truyen jsp, gia tri truyen di);
+        request.setAttribute("mess1",mess);
+        request.setAttribute("number",a);
+        request.getRequestDispatcher("/buoi1/login-form.jsp").forward(request,response);
         // C2: sendRedirect => k mang du lieu truyen di
-        response.sendRedirect("/buoi1/login-form.jsp");
+//        response.sendRedirect("/buoi1/login-form.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Ket - qua
+        // B1: Lay du lieu tu jsp => servlet: getParameter
+        String username = request.getParameter("uname");
+        String password = request.getParameter("pass");
+        // B2: Truyen servlet => jsp
+        request.setAttribute("u1",username);
+        request.setAttribute("u2",password);
+        // B3: Chuyen trang
+        request.getRequestDispatcher("/buoi1/ket-qua-form.jsp").forward(request,response);
 
     }
 }

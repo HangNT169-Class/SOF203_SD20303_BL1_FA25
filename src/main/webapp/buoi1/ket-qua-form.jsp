@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: hangnt
-  Date: 17/9/25
-  Time: 08:22
+  Date: 19/9/25
+  Time: 08:20
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,13 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-${mess1} - ${number}
-<form>
-    <label>Username:</label><input type="text">
-    <br>
-    <label>Password:</label><input type="password">
-    <br>
-    <button type="submit">Login</button>
-</form>
+Username: ${u1}
+<br/>
+Password: ${u2}
 </body>
 </html>
