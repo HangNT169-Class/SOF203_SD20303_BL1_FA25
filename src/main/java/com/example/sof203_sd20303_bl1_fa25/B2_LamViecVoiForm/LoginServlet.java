@@ -55,6 +55,8 @@ public class LoginServlet extends HttpServlet {
         // B1: Lay du lieu tu jsp => servlet: getParameter
         String username = request.getParameter("uname");
         String password = request.getParameter("pass");
+        // Check validate
+        
         // B2: Truyen servlet => jsp
         request.setAttribute("u1",username);
         request.setAttribute("u2",password);
