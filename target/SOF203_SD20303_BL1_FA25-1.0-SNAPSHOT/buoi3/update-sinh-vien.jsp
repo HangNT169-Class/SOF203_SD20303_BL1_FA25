@@ -13,17 +13,18 @@
 <body>
 
 <form action="">
-    MSSV: <input type="text" name="mssv"  />
+
+    MSSV: <input type="text" name="mssv" value="${sv1.mssv1}" />
     <br/>
-    Tên: <input type="text" name="ten" />
+    Tên: <input type="text" name="ten"value="${sv1.ten}" />
     <br/>
-    Tuổi: <input type="text" name="tuoi" />
+    Tuổi: <input type="text" name="tuoi" value="${sv1.tuoi}"/>
     <br/>
-    Địa chỉ: <input type="text" name="diaChi" />
+    Địa chỉ: <input type="text" name="diaChi" value="${sv1.diaChi}" />
     <br/>
     Giới tính:
-    <input type="radio" name="gioiTinh" checked value="true"/>Nam
-    <input type="radio" name="gioiTinh" value="false"/>Nữ
+    <input type="radio" name="gioiTinh" ${sv1.gioiTinh ? "checked":""} value="true"/>Nam
+    <input type="radio" name="gioiTinh"  ${!sv1.gioiTinh ? "checked":""} value="false"/>Nữ
     <br/>
     <button>Update</button>
 </form>
