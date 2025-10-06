@@ -4,9 +4,14 @@
     <title>Title</title>
 </head>
 <body>
-
-<form action="" method="post">
-    MSSV: <input type="text" name="mssv"/>
+<%--Nhung luu y khi lam add & update:
+1. method: post
+2. type butotn => submit
+3. action: truyen duong dan
+4. input: phai co name
+--%>
+<form action="/sinh-vien/add" method="post">
+    MSSV: <input type="text" name="mssv1"/>
     <br/>
     Tên: <input type="text" name="ten"/>
     <br/>
